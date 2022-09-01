@@ -11,12 +11,11 @@ import countries from './countries.json';
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <div className="container">
         <div className="row">
           {<CountriesList countries={countries} />}
           <Routes>
-            <Route path="/:alpha3Code" element={<CountryDetails countriesProp={countries.data} />}/>
+            <Route path="/:countryId" element={<CountryDetails countries={countries} />}/>
           </Routes>
         </div>
       </div>
